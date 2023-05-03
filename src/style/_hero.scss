@@ -11,7 +11,7 @@
   background-size: cover;
   background-position: center;
 
-  &__include md {
+  @include md {
     background-image: url('../img/poster-xl@1x.jpg');
     background-image: image-set(
       url('../img/poster-xl@2x.webp') 2x,
@@ -21,7 +21,7 @@
     );
   }
 
-  &__include xl {
+  @include xl {
     background-image: url('../img/poster-xl@2x.jpg');
     background-image: image-set(
       url('../img/poster-xl@4x.webp') 2x,
@@ -32,7 +32,7 @@
   }
 
   
-  &__include xxl {
+  @include xxl {
     background-image: url('../img/poster-xl@4x.jpg');
     background-image: image-set(
       url('../img/poster-xl@4x.webp') 2x,
@@ -41,14 +41,50 @@
   }
 
   &__container {
+    position: relative;
+    z-index: 10;
     min-height: 554px;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include xl {
+      min-height: 780px;
+
+    }
+    @include xxl {
+      min-height: 100vh;
+
+    }
   }
 
   &__title {
-
+    font-weight: 1000;
+    font-size: 40px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $back;
+    margin-bottom: 24px;
   }
 
   &__subtitle {
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $second;
+  }
 
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    inset: 0;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.38%, #000000 100%);
+  }
+
+  &__video-bg {
+    z-index: 8;
   }
 }
