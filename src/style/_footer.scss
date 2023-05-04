@@ -1,0 +1,126 @@
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include lg {
+      padding-top: 60px;
+      padding-bottom: 50px;
+    }
+
+		&__container { 
+      position: relative;
+      display: grid;
+      gap: 32px;
+      grid-template-areas:
+        "logo"
+        "social"
+        "developers"
+        "copyright";
+
+      @include sm {
+        grid-template-areas: 
+        "logo social"
+        "copyright developers";
+        justify-content: space-between;
+        gap: 40px;
+      }
+      
+      @include lg {
+        gap: 72px;
+      }
+      
+		}
+
+		&__logo {
+      grid-area: logo;
+      width: 200px;
+      height: 32px;
+
+      @include lg {
+        width: 360px;
+        height: 56px;
+      }
+		}
+
+		&__social-list {
+      grid-area: social;
+      display: flex;
+      gap: 16px;
+
+      @include lg {
+        gap: 36px;
+      }
+		}
+
+		&__social-item {
+      width: 36px;
+
+      @include lg {
+        width: 50px;
+      }
+		}
+
+		&__social-link {
+
+		}
+
+		&__developers {
+      grid-area: developers;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 19px;
+      justify-content: space-between;
+
+      @include sm {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+		}
+
+		&__developer {
+      line-height: 1;
+
+      @include lg {
+        font-size: 20px;
+      }
+		}
+
+		&__developer-link {
+		}
+
+		&__copyright {
+      grid-area: copyright;
+      line-height: 1;
+
+      @include lg {
+        font-size: 20px;
+      }
+		}
+
+    &__link {
+      position: absolute;
+      right: 16px;
+      bottom: 0;
+      width: 36px;
+
+      &:hover {
+        color: $back;
+      }
+
+      @include sm {
+        right: 30px;
+      }
+
+      @include lg {
+        width: 50px;
+        right: 32px;
+        bottom: 50px;
+      }
+
+      @include xl {
+        right: 30px;
+      }
+    }
+}
