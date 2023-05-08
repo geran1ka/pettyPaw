@@ -96,7 +96,7 @@
         }
 
         @include lg {
-          background-image: none;
+          //background-image: none;
           background-image: url('../img/mammals_laptop.jpg');
         }
     }
@@ -116,7 +116,7 @@
         }
 
         @include lg {
-          background-image: none;
+          //background-image: none;
           background-image: url('../img/birds_laptop.jpg');
         }
     }
@@ -136,7 +136,7 @@
         }
 
         @include lg {
-          background-image: none;
+          //background-image: none;
           background-image: url('../img/reptiles_laptop.jpg');
         }
     }
@@ -156,7 +156,7 @@
         }
 
         @include lg {
-          background-image: none;
+          //background-image: none;
           background-image: url('../img/water_laptop.jpg');
         }
     }
