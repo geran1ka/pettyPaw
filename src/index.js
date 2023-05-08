@@ -5,12 +5,15 @@ import 'swiper/scss/pagination';
 import './index.scss';
 import { slidersInit } from './modules/sliders';
 
-const videoBj = document.querySelector('.video-bg');
+const videoBjElems = document.querySelectorAll('.video-bg');
 
-videoBj.innerHTML = `
+videoBjElems.forEach((elem, videoBjElems) => {
+  elem.innerHTML = `
   <source src="video/video.webm" type="video/webm">
   <source src="video/video.mp4" type="video/mp4">
 `;
+})
+
 
 
 slidersInit('.about__slider', {
