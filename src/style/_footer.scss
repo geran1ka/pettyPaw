@@ -61,7 +61,20 @@
 		}
 
 		&__social-link {
+      transition: color .3s ease-in-out ;
+      outline-offset: 4px;
 
+      &:hover {
+        color: $second;
+      }
+
+      &:focus {
+        outline-color: $second;
+      }
+
+      &:active {
+        color: $main;
+      }
 		}
 
 		&__developers {
@@ -88,6 +101,21 @@
 		}
 
 		&__developer-link {
+      outline: none;
+      transition: color .3s ease-in-out,
+        border-bottom .3s ease-in-out;
+
+      &:hover {
+        color: $second;
+      }
+
+      &:focus {
+        border-bottom: 2px solid $second;
+      }
+
+      &:active {
+        color: $gray;
+      }
 		}
 
 		&__copyright {
@@ -104,6 +132,8 @@
       right: 16px;
       bottom: 0;
       width: 36px;
+      outline: none;
+      transition: color .3s ease-in-out;
 
       &:hover {
         color: $back;

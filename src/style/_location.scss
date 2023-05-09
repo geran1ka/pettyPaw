@@ -7,6 +7,8 @@
   }
 
   &__list {
+    position: relative;
+    z-index: 10;
 
     @include lg {
       display: flex;
@@ -21,8 +23,6 @@
 
     @include xxl {
       min-height: 100vh;
-      max-width: 2560px;
-      margin: 0 auto;
     }
   }
 
@@ -96,8 +96,8 @@
         }
 
         @include lg {
-          //background-image: none;
-          background-image: url('../img/mammals_laptop.jpg');
+          background-image: none;
+          //background-image: url('../img/mammals_laptop.jpg');
         }
     }
 
@@ -116,8 +116,8 @@
         }
 
         @include lg {
-          //background-image: none;
-          background-image: url('../img/birds_laptop.jpg');
+          background-image: none;
+          //background-image: url('../img/birds_laptop.jpg');
         }
     }
 
@@ -136,8 +136,8 @@
         }
 
         @include lg {
-          //background-image: none;
-          background-image: url('../img/reptiles_laptop.jpg');
+          background-image: none;
+          //background-image: url('../img/reptiles_laptop.jpg');
         }
     }
 
@@ -156,8 +156,8 @@
         }
 
         @include lg {
-          //background-image: none;
-          background-image: url('../img/water_laptop.jpg');
+          background-image: none;
+          //background-image: url('../img/water_laptop.jpg');
         }
     }
 
@@ -176,7 +176,8 @@
         }
 
         @include lg {
-          background-image: url('../img/insects_laptop.jpg');
+          background-image: none;
+         // background-image: url('../img/insects_laptop.jpg');
         }
     }
   }
@@ -189,7 +190,7 @@
     line-height: 1;
     text-transform: uppercase;
     color: $back;
-    z-index: 10;
+
 
     @include lg {
       position: absolute;

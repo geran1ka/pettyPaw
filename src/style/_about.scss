@@ -78,6 +78,11 @@
     @include xl {
       gap: 60px;
     }
+
+    @include xl {
+      min-height: 600px;
+      height: min-content;
+    }
   }
 
   &__description {
