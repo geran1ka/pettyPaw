@@ -75,7 +75,11 @@
 
   &__slider {
     max-width: 100%;
+
+    @include md {
     //overflow: visible;
+    }
+
   }
 
   &__slider-list {
@@ -86,22 +90,26 @@
     display: flex;
     align-items: center;
 
+    @include sm { 
+      width: 48%;
+    }  
+    
     @include md {    
-      &:nth-child(odd) {
+      &_odd {
         width: 34.68%;
       }
 
-      &:nth-child(even) {
+      &_even {
         width: 25.2%;
       }
     }
 
     @include xl {    
-      &:nth-child(odd) {
+      &_odd {
         width: 27.2%;
       }
 
-      &:nth-child(even) {
+      &_even {
         width: 19.5%;
       }
     }

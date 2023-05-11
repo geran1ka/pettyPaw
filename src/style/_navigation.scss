@@ -48,7 +48,13 @@
     line-height: 1;
     font-size: 16px;
     white-space: nowrap;
-    outline: none;
+    outline: 2px solid transparent;
+    outline-offset: 5px;
+    padding: 0 5px;
+
+    &:focus:not(:hover) {
+      outline-color: $back;
+    }
 
     &_active {
       color: $back;
@@ -56,11 +62,18 @@
       
     }
 
+    @include lg {
+      &:hover {
+        color: $back;
+      }
+    }
+
 
     @include xl {
       display: block;
       padding: 16px 30px;
       border: 2px solid $back;
+      outline: none;
       border-radius: 80px;
       transition: color .3s ease-in-out,
         background-color .3s ease-in-out,
@@ -76,16 +89,10 @@
         color: $back;
       }
 
-      &:focus {
-        color: $second;
+      &:focus:not(:hover) {
         background-color: $back;
       }
 
-      &:active {
-        color: $second;
-        background-color: inherit;
-        border-color: $second;
-      }
     }
   }
 
