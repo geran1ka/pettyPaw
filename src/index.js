@@ -1,4 +1,5 @@
 import './index.html';
+import './page.html';
 // new modules
 import 'swiper/scss';
 import 'swiper/scss/pagination';
@@ -26,23 +27,23 @@ careerImageItems.forEach((item, index) => {
 
 slidersInit('.career__slider', {
   pagination: {
-    el: '.career__slider-pagination'
+    el: '.career__slider-pagination',
   },
   breakpoints: {
     576: {
       slidesPerView: 'auto',
       spaceBetween: 20,
-
+      pagination: false,
     },
     1024: {
       slidesPerView: 'auto',
       spaceBetween: 26,
-
+      pagination: false,
     },
     1240: {
       slidesPerView: 'auto',
       spaceBetween: 30,
-
+      pagination: false,
     }
   }
 })

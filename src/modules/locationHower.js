@@ -76,7 +76,7 @@ export const locationHover = () => {
       }
 
       mediaQueryLG.addEventListener('change', (e) => {
-        if (!matches) {
+        if (!mediaQueryLG.matches) {
           content.style = '';
           title.style = '';
           description.style = '';

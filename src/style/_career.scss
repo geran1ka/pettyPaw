@@ -61,6 +61,7 @@
 
     @include md {
       grid-area: description;
+      
     }
   }
 
@@ -79,10 +80,6 @@
     @include md {
     //overflow: visible;
     }
-
-  }
-
-  &__slider-list {
   }
 
   &__slider-item {
@@ -115,13 +112,7 @@
     }
   }
 
-  &__image-wrapper {
-  }
-
   &__iamge {
     border-radius: 16px;
-  }
-
-  &__slider-pagination {
   }
 }
