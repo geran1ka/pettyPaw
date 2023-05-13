@@ -1,10 +1,10 @@
 .page {
   padding-top: 120px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 
   @include lg {
     padding-top: 216px;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
   }
 
   &__container {
@@ -12,7 +12,7 @@
 
     @include md {
       max-width: 980px;
-      padding: 0 02px;
+      padding: 0 30px;
     }
 
     @include lg {
@@ -69,16 +69,40 @@
   &__image-wrapper {
     margin-bottom: 40px;
 
+    @include lg {
+      margin-bottom: 60px;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
 
-    @include lg {
-      margin-bottom: 60px;
+
+    &_two {
+      --gap: 18px;
+
+      @include sm {
+        display: flex;
+        gap: var(--gap);
+        flex-grow: 1;
+  
+        .page__image {
+          width: calc(50% - var(--gap) / 2);
+        }
+      }
+
+      @include lg {
+      --gap: 20px;
+      }
+
+      @include xl {
+      --gap: 30px;
+      }
     }
   }
 
   &__image {
+    --gap: 18px;
     height: 308px;
     border-radius: 16px;
     object-fit: cover;
@@ -89,6 +113,7 @@
 
     @include sm {
       height: auto;
+      flex-grow: 1;
 
       &:nth-child(2) {
         display: block;
@@ -96,31 +121,5 @@
     }
   }
 
-  &__image-wrapper-two {
-    --gap: 18px;
-    @include sm {
-      display: flex;
-      gap: var(--gap);
-      flex-grow: 1;
-
-      .page__image {
-        width: calc(50% - var(--gap) / 2);
-      }
-    }
-    @include lg {
-      --gap: 20px;
-
-    }
-    @include xl {
-      --gap: 30px;
-    }
-
-  }
-
-  &__link {
-  }
 }
-.container {
-}
-.link-main {
-}
+
