@@ -18,6 +18,8 @@ initScrollTopButton('arrow-top', {
   hover: false,
 });
 
+pageControlInit();
+
 slidersInit('.about__slider', {
   pagination: {
     el: '.about__slider-pagination'
