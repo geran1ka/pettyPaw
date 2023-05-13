@@ -23,12 +23,9 @@ export const menuControl = () => {
   }
 
   const closeMenu = () => {
+    navigationButton.classList.remove('navigation__button_active');
     tl.reverse();
   }
-
-    tl.eventCallback('onReverseComplete', () => {
-      navigationButton.classList.remove('navigation__button_active');
-    } )
 
 
 
@@ -52,11 +49,15 @@ const checkScreenSize = (e) => {
         const x = i % 2 ? 500 : -500;
         gsap.set(elem, {opacity: 0, x, duration: 1});
       })
+
+      if (navigationButton.classList.contains('navigation__button_active')) {
+        tl.restart();
+      }
     }
   }
 
 
-  const mediaQuery = window.matchMedia('(min-width: 1280px)');
+  const mediaQuery = window.matchMedia('(min-width: 1240px)');
   mediaQuery.addEventListener('change', checkScreenSize)
   checkScreenSize(mediaQuery);
 }

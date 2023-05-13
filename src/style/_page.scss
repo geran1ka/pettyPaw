@@ -1,0 +1,88 @@
+.page {
+  padding-top: 120px;
+  padding-bottom: 40px;
+
+  &__container {
+    padding: 0 16px;
+  }
+
+  &__title {
+    font-weight: 1000;
+    font-size: 52px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $second;
+    margin-bottom: 24px;
+  }
+
+  &__text-block {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image-wrapper {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__image {
+    height: 308px;
+    border-radius: 16px;
+    object-fit: cover;
+
+    &:nth-child(2) {
+      display: none;
+    }
+
+    @include sm {
+      height: auto;
+
+      &:nth-child(2) {
+        display: block;
+      }
+    }
+  }
+
+  &__image-wrapper-two {
+    @include sm {
+      display: flex;
+      jas
+      //удалить временно
+      flex-grow: 1;
+
+      .page__image {
+        width: 48%;
+      }
+    }
+    @include lg {
+      gap: 20px;
+
+    }
+    @include xl {
+      gap: 30px;
+    }
+
+  }
+
+  &__link {
+  }
+}
+.container {
+}
+.link-main {
+}
