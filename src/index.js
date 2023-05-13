@@ -8,14 +8,12 @@ import { slidersInit } from './modules/sliders';
 import { videoBackgroundInit } from './modules/videoBackground';
 import { menuControl } from './modules/menuControl';
 import { locationHover } from './modules/locationHower';
-//
 import { initScrollTopButton } from './modules/scrollTopButton';
 
 videoBackgroundInit();
 menuControl();
 locationHover();
 
-// временно удалить
 initScrollTopButton('arrow-top', {
   hover: false,
 });
