@@ -183,14 +183,12 @@ iframe {
     }
   };
 
-  // временно удалить
   .arrow-top {
-    border-bottom: 3px solid red;
     width: 36px;
     height: 36px;
     right: 16px;
     bottom: 30px;
-/*
+
     @include sm {
       right: 30px;
     }
@@ -201,6 +199,10 @@ iframe {
       bottom: 100px;
     }
 
+    &:hover {
+      color: $back;
+    }
+
     &__svg {
       width: 12px;
 
@@ -208,7 +210,6 @@ iframe {
         width: 16px;
       }
     }
-    */
   }
 
 }

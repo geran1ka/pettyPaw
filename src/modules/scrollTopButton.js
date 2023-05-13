@@ -1,3 +1,19 @@
+const debounceRAF = (fn, msec) => {
+  let lastCall = 0;
+  let lastCallTimer = 0;
+
+  return (...arg) => {
+    const prevCall = lastCall;
+    lastCall = Date.now();
+
+    if (prevCall && (lastCall - prevCall) < msec) {
+      clearTimeout(lastCallTimer);
+    }
+
+    lastCallTimer = setTimeout(() => fn(...arg), msec);
+  }
+};
+
 const createArrow = (className = 'arrow-up', {hover = true} = {}) => {
   const button = document.createElement('button');
 
@@ -42,6 +58,13 @@ const createArrow = (className = 'arrow-up', {hover = true} = {}) => {
 
   document?.head.prepend(style);
 
+  button.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+
   return button;
 }
 
@@ -53,9 +76,9 @@ export const initScrollTopButton = (className, options) => {
   const showElemScrollPosition = () => {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
   
-    arrow.style.display = scrollPosition > window.innerHeight / 2 ? 'flex' : 'none';
+    arrow.style.display = (scrollPosition > window.innerHeight / 2) ? 'flex' : 'none';
   }
 
-  window.addEventListener('scroll', showElemScrollPosition)
+  window.addEventListener('scroll', debounceRAF(showElemScrollPosition, 200));
 }
 

@@ -22,7 +22,8 @@ pageControlInit();
 
 slidersInit('.about__slider', {
   pagination: {
-    el: '.about__slider-pagination'
+    el: '.about__slider-pagination',
+    enabled: true,
   }
 })
 
