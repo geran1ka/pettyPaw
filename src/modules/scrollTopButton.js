@@ -56,7 +56,7 @@ const createArrow = (className = 'arrow-up', {hover = true} = {}) => {
     `}
   `;
 
-  document?.body.prepend(style);
+  document?.head.prepend(style);
 
   button.addEventListener('click', () => {
     window.scrollTo({
